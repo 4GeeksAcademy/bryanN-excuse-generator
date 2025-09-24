@@ -20,29 +20,39 @@ window.onload = function () {
     when: ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'],
   }
 
+  
+  function excusegenerator (){
+ 
+  let rndmnum = [];
+
+  let excuse = [];
+
+  for (const val in excuses){    
+
+    let datalength = excuses[val];
+    
+    let num = Math.floor(Math.random() * datalength.length);
+
+    rndmnum.push(num);
+
+    excuse.push(datalength[num])
+    
+    
+    
 
 
-  function uno() {
-    console.log('por favor');
 
   }
 
-  let ex_length = Object.keys(excuses);
-
-  for (const property in excuses) {
-    console.log('Hello');
-    console.log(excuses.property);
-    console.log(`${property}: ${excuses[property]}`);
+  let excusesentence = excuse.join(' ')
 
 
-  }
+return console.log(excusesentence);
 
 
+}
 
-
-  window.uno = uno;
-
-
+excusegenerator()
 
 
 };
